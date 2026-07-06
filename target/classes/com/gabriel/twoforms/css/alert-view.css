@@ -1,0 +1,31 @@
+.alert-dialog { -fx-background-color: #f5f5f5; }
+
+/* Header area (icon + header text) */
+.alert-dialog .header-panel { -fx-background-color: #8c0902; }
+
+.alert-dialog .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}
+
+/* Body/content text */
+.alert-dialog .content.label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 13;
+}
+
+/* Button bar */
+.alert-dialog .button-bar .button {
+    -fx-background-color: #8c0902;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+}
+
+.alert-dialog .button-bar .button:hover {
+    -fx-background-color: #e6a341;
+    -fx-text-fill: #210100;
+    -fx-cursor: hand;
+}
