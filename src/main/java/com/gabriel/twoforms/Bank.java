@@ -11,19 +11,30 @@ import javafx.scene.control.Alert.AlertType;
 public class Bank {
     static ArrayList<Account> accounts = new ArrayList<>();
 
+    // Applies the shared alert-view.css styling to any Alert dialog.
+    private static void styleAlert(Alert alert) {
+        alert.getDialogPane().getStylesheets().add(
+                Bank.class.getResource("/com/gabriel/twoforms/css/alert-view.css").toExternalForm()
+        );
+        alert.getDialogPane().getStyleClass().add("alert-dialog");
+    }
+
     static void createAccount(int accountNumber, String owner) {
 
         Alert AccExist = new Alert(AlertType.INFORMATION);
         AccExist.setHeaderText("Account already exists!");
         AccExist.setTitle("Warning!");
+        styleAlert(AccExist);
 
         Alert NewAcc = new Alert(AlertType.INFORMATION);
         NewAcc.setHeaderText("Account created successfully");
         NewAcc.setTitle("Congrats!");
+        styleAlert(NewAcc);
 
         for(Account acc:accounts) {
             if (acc.getAccountNumber() ==accountNumber) {
                 System.out.println("Account already exists!");
+
                 AccExist.showAndWait();
                 return;
             }
@@ -56,6 +67,7 @@ public class Bank {
         Alert NoAcc = new Alert(AlertType.INFORMATION);
         NoAcc.setHeaderText("Account not found!");
         NoAcc.setTitle("Oh No!");
+        styleAlert(NoAcc);
         System.out.println("Account not found!");
         NoAcc.showAndWait();
     }
@@ -80,6 +92,7 @@ public class Bank {
         Alert NoAcc = new Alert(AlertType.INFORMATION);
         NoAcc.setHeaderText("Account not found!");
         NoAcc.setTitle("Oh No!");
+        styleAlert(NoAcc);
         System.out.println("Account not found!");
         NoAcc.showAndWait();
     }
@@ -87,6 +100,7 @@ public class Bank {
     static void Check(double amount,int accountNumber) {
         Alert Balance = new Alert(AlertType.INFORMATION);
         Balance.setHeaderText("Account not found!");
+        styleAlert(Balance);
     }
 
     public static void loadAccountsFromFile() {

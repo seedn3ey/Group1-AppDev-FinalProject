@@ -20,6 +20,7 @@ public class CreateAccountController {
     private int accountNumber;
     @javafx.fxml.FXML
     private Button createSubmit;
+
     @javafx.fxml.FXML
     private TextField tf_name;
     @javafx.fxml.FXML
@@ -77,5 +78,13 @@ public class CreateAccountController {
     }
 
 
-
+    public void backClick(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("admin-view.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Node node = (Node)actionEvent.getSource();
+        Stage stage = (Stage)node.getScene().getWindow();
+        stage.setTitle("Welcome Page");
+        stage.setScene(scene);
+    }
 }

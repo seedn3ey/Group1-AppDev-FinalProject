@@ -1,0 +1,63 @@
+.accounts-root { -fx-background-color: #f5f5f5; }
+
+.accounts-table {
+    -fx-background-color: transparent;
+    -fx-border-color: #8c0902;
+    -fx-border-width: 1;
+}
+
+.accounts-table .column-header-background {
+    -fx-background-color: #8c0902;
+}
+
+.accounts-table .column-header .label {
+    -fx-text-fill: black;
+    -fx-font-weight: bolder;
+    -fx-alignment: CENTER-LEFT;
+}
+
+/* Alternating red / yellow rows */
+.accounts-table .table-row-cell:odd { -fx-background-color: #8c0902; }
+
+.accounts-table .table-row-cell:odd .table-cell {
+    -fx-text-fill: white;
+    -fx-font-weight: bolder;
+
+}
+
+.accounts-table .table-row-cell:even { -fx-background-color: #e6a341; }
+
+.accounts-table .table-row-cell:even .table-cell {
+    -fx-text-fill: #3a2a00;
+    -fx-font-weight: bolder;
+
+}
+
+/* Hover feedback */
+.accounts-table .table-row-cell:hover {
+    -fx-background-color: derive(#8c0902, 20%);
+}
+
+/* Selected row */
+.accounts-table .table-row-cell:selected { -fx-background-color: white; }
+
+.accounts-table .table-row-cell:selected .table-cell { -fx-text-fill: black; }
+
+#backClick {
+    -fx-background-radius: 15;
+    -fx-pref-height: 40;
+    -fx-pref-width: 75;
+    -fx-background-color: #8c0902;
+    -fx-font-size: 15;
+    -fx-text-fill: #e6a341;;
+    -fx-font-weight: bold;
+}
+
+#backClick:hover {
+    -fx-background-color: #e6a341;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-cursor: hand;
+    -fx-text-fill: #210100;
+
+}

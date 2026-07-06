@@ -73,8 +73,6 @@ public class TransactionController {
         Platform.exit();
     }
 
-
-
     @FXML
     public void depositClick(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("deposit-view.fxml"));

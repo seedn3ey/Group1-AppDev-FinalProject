@@ -1,26 +1,21 @@
-.welcome-root {
-    -fx-background-color: #ffffff;
-}
+.labels { -fx-font-weight: bold;}
 
-.app-title {
-    -fx-font-weight: bolder;
-    -fx-text-fill: #fece79;
-}
-
-.menu-button {
+.btn{
     -fx-background-radius: 15;
-    -fx-pref-height: 70;
-    -fx-pref-width: 150;
+    -fx-pref-height: 40;
+    -fx-pref-width: 75;
     -fx-background-color: #8c0902;
     -fx-font-size: 15;
-    -fx-text-fill: #e6a341;
+    -fx-text-fill: #e6a341;;
     -fx-font-weight: bold;
+
 }
 
-.menu-button:hover {
+.btn:hover{
     -fx-background-color: #e6a341;
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
     -fx-cursor: hand;
     -fx-text-fill: #210100;
+
 }
