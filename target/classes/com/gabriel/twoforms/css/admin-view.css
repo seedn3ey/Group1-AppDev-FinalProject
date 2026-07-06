@@ -1,0 +1,22 @@
+#title {
+
+    -fx-font-weight: bolder;
+    -fx-text-fill: #fece79;
+}
+
+.btns {
+    -fx-background-radius: 15;
+    -fx-pref-height: 70;
+    -fx-pref-width: 150;
+    -fx-background-color: #8c0902;
+    -fx-font-size: 15;
+    -fx-text-fill: #ffffff;
+}
+
+.btns:hover {
+    -fx-background-color: #e6a341;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-cursor: hand;
+    -fx-text-fill: #210100;
+}
