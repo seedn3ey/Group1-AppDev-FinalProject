@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="400.0" prefWidth="400.0" spacing="20.0" stylesheets="@css/admin-view.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.TransactionController">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="500.0" spacing="20.0" stylesheets="@css/admin-view.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.TransactionController">
     <children>
         <Label fx:id="title" alignment="CENTER" prefHeight="155.0" prefWidth="436.0" text="Select Transaction">
             <padding>
