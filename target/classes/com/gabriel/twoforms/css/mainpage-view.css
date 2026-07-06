@@ -1,24 +1,25 @@
 .welcome-root {
-    -fx-background-color: #f5f5f5;
+    -fx-background-color: #ffffff;
 }
 
 .app-title {
-    -fx-font-weight: bold;
-    -fx-text-fill: #da291c;
+    -fx-font-weight: bolder;
+    -fx-text-fill: #fece79;
 }
 
 .menu-button {
     -fx-background-radius: 15;
     -fx-pref-height: 70;
     -fx-pref-width: 150;
-    -fx-background-color: #da291c;
+    -fx-background-color: #8c0902;
     -fx-font-size: 15;
-    -fx-text-fill: white;
+    -fx-text-fill: #ffffff;
 }
 
 .menu-button:hover {
-    -fx-background-color: #ffc72c;
+    -fx-background-color: #e6a341;
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
     -fx-cursor: hand;
+    -fx-text-fill: #210100;
 }
