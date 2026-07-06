@@ -11,12 +11,23 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class CL {
-    @javafx.fxml.FXML
-    private Button btnSubmit;
-    @javafx.fxml.FXML
-    private Button btnExit;
 
     @javafx.fxml.FXML
+    private Button btn_Deposit;
+    @javafx.fxml.FXML
+    private Button btn_Bal;
+    @javafx.fxml.FXML
+    private Button btn_withdraw;
+    @javafx.fxml.FXML
+    private Button btn_Exit;
+    @javafx.fxml.FXML
+    private Label accNum;
+    @javafx.fxml.FXML
+    private Label accName;
+    @javafx.fxml.FXML
+    private Button btn_Exit1;
+
+    @Deprecated
     public void OnCheckBalance(ActionEvent actionEvent) {
         Account activeUser = CustomerLoginController.currentLoggedInAccount;
 
@@ -30,7 +41,7 @@ public class CL {
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void OnBackToMenu(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customer-view.fxml"));
         Parent root = (Parent) fxmlLoader.load();
@@ -39,5 +50,21 @@ public class CL {
         Stage stage = (Stage) node.getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void withdrawClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void balanceClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void exitClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void depositClick(ActionEvent actionEvent) {
     }
 }
