@@ -3,12 +3,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="229.0" prefWidth="387.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.CreateAccountController">
+<AnchorPane prefHeight="320.0" prefWidth="420.0" stylesheets="@css/create-view.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.CreateAccountController">
    <children>
-      <Label layoutX="64.0" layoutY="67.0" text="Account Number" />
-      <TextField fx:id="acc_num" layoutX="178.0" layoutY="63.0" prefHeight="26.0" prefWidth="60.0" />
-      <Label layoutX="64.0" layoutY="118.0" text="Enter owner name" />
-      <TextField fx:id="tf_name" layoutX="179.0" layoutY="114.0" />
-      <Button fx:id="createSubmit" layoutX="168.0" layoutY="164.0" mnemonicParsing="false" onAction="#OnCreateSubmit" text="Submit" />
+
+      <Button fx:id="back" alignment="CENTER" layoutX="64.0" layoutY="168.0" mnemonicParsing="false" onAction="#backClick" styleClass="btn" text="Back" />
+
+      <Label layoutX="64.0" layoutY="67.0" styleClass="labels" text="Enter account number:" />
+      <TextField fx:id="acc_num" layoutX="203.0" layoutY="63.0" prefHeight="26.0" prefWidth="135.0" />
+
+      <Label layoutX="64.0" layoutY="118.0" styleClass="labels" text="Enter owner name:" />
+      <TextField fx:id="tf_name" layoutX="204.0" layoutY="114.0" prefHeight="26.0" prefWidth="135.0" />
+
+      <Button fx:id="createSubmit" layoutX="263.0" layoutY="168.0" mnemonicParsing="false" onAction="#OnCreateSubmit" prefHeight="41.0" prefWidth="101.0" styleClass="btn" text="Submit" />
    </children>
 </AnchorPane>

@@ -13,8 +13,8 @@
     -fx-pref-width: 150;
     -fx-background-color: #8c0902;
     -fx-font-size: 15;
-    -fx-text-fill: #ffffff;
-    -fx-font-weight-bold;
+    -fx-text-fill: #e6a341;
+    -fx-font-weight: bold;
 }
 
 .menu-button:hover {
