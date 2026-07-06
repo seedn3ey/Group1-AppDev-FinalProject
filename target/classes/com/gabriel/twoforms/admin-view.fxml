@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="300.0" prefWidth="400.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.TransactionController">
+<VBox alignment="CENTER" prefHeight="300.0" prefWidth="400.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@css/admin-view.css" fx:controller="com.gabriel.twoforms.TransactionController">
     <children>
-        <Label alignment="CENTER" prefHeight="288.0" prefWidth="230.0" text="Select Transaction">
+        <Label fx:id="title" alignment="CENTER" prefHeight="288.0" prefWidth="230.0" text="Select Transaction">
             <padding>
                 <Insets right="20.0" />
             </padding>
@@ -15,9 +15,9 @@
                 <Font size="24.0" />
             </font>
         </Label>
-        <Button fx:id="btn_Create" alignment="CENTER" contentDisplay="CENTER" onAction="#createClick" text="Create Account" />
-        <Button fx:id="view" mnemonicParsing="false" onAction="#OnView" text="View Accounts" />
-        <Button fx:id="btn_Exit" alignment="CENTER" mnemonicParsing="false" onAction="#exitClick" text="Exit" />
+        <Button fx:id="btn_Create" alignment="CENTER" contentDisplay="CENTER" onAction="#createClick" styleClass="btns" text="Create Account" />
+        <Button fx:id="view" mnemonicParsing="false" onAction="#OnView" styleClass="btns" text="View Accounts" />
+        <Button fx:id="btn_Exit" alignment="CENTER" mnemonicParsing="false" onAction="#exitClick" styleClass="btns" text="Exit" />
     </children>
     <padding>
         <Insets bottom="20.0" />
