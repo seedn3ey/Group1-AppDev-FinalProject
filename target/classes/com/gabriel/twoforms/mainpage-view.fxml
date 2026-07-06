@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="550.0" prefWidth="550.0" styleClass="welcome-root" stylesheets="@css/mainpage-view.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.MainController">
+<AnchorPane prefHeight="320.0" prefWidth="450.0" styleClass="welcome-root" stylesheets="@css/mainpage-view.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.MainController">
    <children>
       <Label layoutX="200.0" layoutY="83.0" styleClass="app-title" text="MBI" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="83.0">
          <font>
