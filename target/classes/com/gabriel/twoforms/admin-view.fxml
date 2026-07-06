@@ -17,6 +17,7 @@
         </Label>
         <Button fx:id="btn_Create" alignment="CENTER" contentDisplay="CENTER" onAction="#createClick" styleClass="btns" text="Create Account" />
         <Button fx:id="view" mnemonicParsing="false" onAction="#OnView" styleClass="btns" text="View Accounts" />
+        <Button fx:id="back" alignment="CENTER" mnemonicParsing="false" onAction="#backClick" styleClass="btns" text="Back" />
         <Button fx:id="btn_Exit" alignment="CENTER" mnemonicParsing="false" onAction="#exitClick" styleClass="btns" text="Exit" />
     </children>
     <padding>
