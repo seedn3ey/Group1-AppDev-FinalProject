@@ -5,18 +5,18 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="550.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@css/mainpage-view.css" styleClass="welcome-root" fx:controller="com.gabriel.twoforms.MainController">
+<AnchorPane prefHeight="550.0" prefWidth="550.0" styleClass="welcome-root" stylesheets="@css/mainpage-view.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.MainController">
    <children>
-      <Label layoutX="64.0" layoutY="95.0" text="MBI" styleClass="app-title" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="95.0">
+      <Label layoutX="200.0" layoutY="83.0" styleClass="app-title" text="MBI" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="83.0">
          <font>
             <Font size="24.0" />
          </font></Label>
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="100.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="14.0">
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="41.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="42.0">
          <image>
             <Image url="@images/A.PNG" />
          </image>
       </ImageView>
-      <Button fx:id="btn_admin" styleClass="menu-button" layoutX="60.0" layoutY="146.0" mnemonicParsing="false" onAction="#adminwind" text="Admin" />
-      <Button fx:id="btn_cust" styleClass="menu-button" layoutX="230.0" layoutY="146.0" mnemonicParsing="false" onAction="#customwind" text="Customer" />
+      <Button fx:id="btn_admin" layoutX="60.0" layoutY="146.0" mnemonicParsing="false" onAction="#adminwind" styleClass="menu-button" text="Admin" />
+      <Button fx:id="btn_cust" layoutX="230.0" layoutY="146.0" mnemonicParsing="false" onAction="#customwind" styleClass="menu-button" text="Customer" />
    </children>
 </AnchorPane>
