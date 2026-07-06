@@ -1,0 +1,15 @@
+.button {
+    -fx-background-radius: 15;
+    -fx-pref-height: 70;
+    -fx-pref-width: 300;
+    -fx-background-color: #da291c;
+    -fx-font-size: 17;
+    -fx-transition: -fx-background-color 0.3s;
+}
+
+.button:hover {
+    -fx-background-color: #ffc72c;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-cursor: hand;
+}

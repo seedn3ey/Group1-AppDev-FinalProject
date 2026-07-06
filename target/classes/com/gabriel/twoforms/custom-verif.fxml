@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300" prefWidth="400" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.CustomerLoginController">
+    <children>
+        <Label layoutX="107" layoutY="54" text="Customer Login">
+            <font><Font size="20" /></font>
+        </Label>
+        <TextField fx:id="tf_login_acc" layoutX="107.0" layoutY="116.0" promptText="Enter Account Number" />
+        <Button layoutX="168.0" layoutY="168.0" mnemonicParsing="false" onAction="#OnLoginSubmit" text="Login" />
+        <Label fx:id="lbl_error" layoutX="107.0" layoutY="215.0" text="" textFill="RED" />
+    </children>
+</AnchorPane>
