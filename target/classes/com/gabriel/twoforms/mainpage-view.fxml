@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="550.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.MainController">
+<AnchorPane prefHeight="550.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@css/mainpage-view.css" styleClass="welcome-root" fx:controller="com.gabriel.twoforms.MainController">
    <children>
-      <Label layoutX="64.0" layoutY="95.0" text="MBI" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="95.0">
+      <Label layoutX="64.0" layoutY="95.0" text="MBI" styleClass="app-title" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="95.0">
          <font>
             <Font size="24.0" />
          </font></Label>
@@ -16,7 +16,7 @@
             <Image url="@images/A.PNG" />
          </image>
       </ImageView>
-      <Button fx:id="btn_admin" layoutX="101.0" layoutY="146.0" mnemonicParsing="false" onAction="#adminwind" text="Admin" />
-      <Button fx:id="btn_cust" layoutX="175.0" layoutY="146.0" mnemonicParsing="false" onAction="#customwind" text="Customer" />
+      <Button fx:id="btn_admin" styleClass="menu-button" layoutX="60.0" layoutY="146.0" mnemonicParsing="false" onAction="#adminwind" text="Admin" />
+      <Button fx:id="btn_cust" styleClass="menu-button" layoutX="230.0" layoutY="146.0" mnemonicParsing="false" onAction="#customwind" text="Customer" />
    </children>
 </AnchorPane>
