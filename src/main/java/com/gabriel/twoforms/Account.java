@@ -13,9 +13,17 @@ public class Account {
         this.balance = 0.0;
     }
 
-    public int getAccountNumber() { return accountNumber; }
-    public String getOwner() { return owner; }
-    public double getBalance() { return balance; }
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
 
     public void deposit(double DepositedAmount) {
         Alert AlertDeposit = new Alert(Alert.AlertType.INFORMATION);
@@ -60,31 +68,6 @@ public class Account {
     public void depositSilently(double amount) {
         if (amount > 0) {
             balance += amount;
-        }
-    }
-
-    public void CheckBal(double CheckB) {
-        Alert AlertCheckBalance = new Alert(Alert.AlertType.INFORMATION);
-        AlertCheckBalance.setHeaderText("Here is your Balance in your account.");
-    }
-}    }
-
-    public void withdraw(double WithdrawAmount) {
-        Alert AlertWithdraw = new Alert(Alert.AlertType.INFORMATION);
-        AlertWithdraw.setHeaderText("Invalid Withdrawal amount.");
-        AlertWithdraw.setTitle("Withdraw Warning!");
-
-        Alert WithdrawAlert = new Alert(Alert.AlertType.INFORMATION);
-        WithdrawAlert.setHeaderText("Withdrawn: " + WithdrawAmount);
-        WithdrawAlert.setTitle("Withdraw Warning!");
-
-        if (WithdrawAmount > 0 && WithdrawAmount < balance) {
-            balance -= WithdrawAmount;
-            System.out.println("Withdrawn: " + WithdrawAmount);
-            WithdrawAlert.show();
-        } else {
-            System.out.println("Invalid Withdrawal amount.");
-            AlertWithdraw.show();
         }
     }
 
