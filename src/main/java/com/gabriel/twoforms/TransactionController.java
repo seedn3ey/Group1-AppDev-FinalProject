@@ -96,4 +96,15 @@ public class TransactionController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    public void backClick(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("mainpage-view.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Node node = (Node) actionEvent.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.setTitle("Welcome Page");
+        stage.setScene(scene);
+    }
 }
