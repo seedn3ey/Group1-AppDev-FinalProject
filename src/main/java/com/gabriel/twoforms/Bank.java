@@ -36,37 +36,52 @@ public class Bank {
 
     }
 
+    // Silent version — no popups. Used only when restoring accounts from disk on startup.
+    private static void createAccountSilently(int accountNumber, String owner) {
+        for (Account acc : accounts) {
+            if (acc.getAccountNumber() == accountNumber) {
+                return; // already exists, skip quietly
+            }
+        }
+        accounts.add(new Account(accountNumber, owner));
+    }
+
     static void deposit(double amount,int accountNumber) {
+        for(Account acc:accounts) {
+            if (acc.getAccountNumber() == accountNumber) {
+                acc.deposit(amount);
+                return;
+            }
+        }
         Alert NoAcc = new Alert(AlertType.INFORMATION);
         NoAcc.setHeaderText("Account not found!");
         NoAcc.setTitle("Oh No!");
-        for(Account acc:accounts) {
-            if (acc.getAccountNumber() != accountNumber) {
-                System.out.println("Account not found!");
-                NoAcc.showAndWait();
-            }
-            else {
-                 acc.deposit(amount);
-                 break;
+        System.out.println("Account not found!");
+        NoAcc.showAndWait();
+    }
+
+    // Silent version — no popups. Used only when restoring balances from disk on startup.
+    private static void depositSilently(double amount, int accountNumber) {
+        for (Account acc : accounts) {
+            if (acc.getAccountNumber() == accountNumber) {
+                acc.depositSilently(amount);
+                return;
             }
         }
     }
 
     static void withdraw(double amount,int accountNumber) {
+        for(Account acc:accounts) {
+            if (acc.getAccountNumber() == accountNumber) {
+                acc.withdraw(amount);
+                return;
+            }
+        }
         Alert NoAcc = new Alert(AlertType.INFORMATION);
         NoAcc.setHeaderText("Account not found!");
         NoAcc.setTitle("Oh No!");
-
-        for(Account acc:accounts) {
-            if (acc.getAccountNumber() != accountNumber) {
-                System.out.println("Account not found!");
-                NoAcc.showAndWait();
-            }
-            else {
-                acc.withdraw(amount);
-                break;
-            }
-        }
+        System.out.println("Account not found!");
+        NoAcc.showAndWait();
     }
 
     static void Check(double amount,int accountNumber) {
@@ -89,12 +104,12 @@ public class Bank {
                     int accNum = Integer.parseInt(data[1]);
                     double balance = Double.parseDouble(data[2]);
 
-                    // 1. Recreate the account structure using your existing Bank logic!
-                    createAccount(accNum, name);
+                    // 1. Recreate the account structure silently (no popup)
+                    createAccountSilently(accNum, name);
 
-                    // 2. Add their money back if they had a balance
+                    // 2. Add their money back silently (no popup)
                     if (balance > 0) {
-                        deposit(balance, accNum);
+                        depositSilently(balance, accNum);
                     }
                 }
             }
@@ -104,4 +119,3 @@ public class Bank {
         }
     }
 }
-
