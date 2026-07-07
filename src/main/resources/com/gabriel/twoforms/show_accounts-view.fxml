@@ -12,6 +12,8 @@
                 <TableColumn fx:id="balance" minWidth="200.0" prefWidth="75.0" text="Account Balance" />
             </columns>
         </TableView>
-        <Button fx:id="backClick" layoutX="255.0" layoutY="302.0" mnemonicParsing="false" onAction="#OnBackClick" styleClass="menu-button" text="Back" />
+        <Button fx:id="ModifyClick" layoutX="110.0" layoutY="302.0" mnemonicParsing="false" onAction="#OnModifyClick" styleClass="menu-button" text="Modify" />
+        <Button fx:id="DeleteClick" layoutX="270.0" layoutY="302.0" mnemonicParsing="false" onAction="#OnDeleteClick" styleClass="menu-button" text="Delete" />
+        <Button fx:id="backClick" layoutX="420.0" layoutY="302.0" mnemonicParsing="false" onAction="#OnBackClick" styleClass="menu-button" text="Back" />
     </children>
 </AnchorPane>
