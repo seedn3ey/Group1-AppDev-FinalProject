@@ -101,64 +101,6 @@
 
         </Button>
 
-        <!-- ================= Deposit ================= -->
-
-        <Button fx:id="btn_Deposit"
-                text="Deposit"
-                prefWidth="240"
-                prefHeight="65"
-                maxWidth="240"
-                maxHeight="65"
-                onAction="#depositClick"
-                GridPane.columnIndex="2"
-                GridPane.rowIndex="1"
-                GridPane.halignment="CENTER">
-
-            <font>
-                <Font size="18"/>
-            </font>
-
-        </Button>
-
-        <!-- ================= Withdraw ================= -->
-
-        <Button fx:id="btn_withdraw"
-                text="Withdraw"
-                prefWidth="240"
-                prefHeight="65"
-                maxWidth="240"
-                maxHeight="65"
-                onAction="#withdrawClick"
-                GridPane.columnIndex="1"
-                GridPane.rowIndex="2"
-                GridPane.halignment="CENTER">
-
-            <font>
-                <Font size="18"/>
-            </font>
-
-        </Button>
-
-        <!-- ================= Balance ================= -->
-
-        <Button fx:id="btn_Bal"
-                text="View Balance"
-                wrapText="true"
-                prefWidth="240"
-                prefHeight="65"
-                maxWidth="240"
-                maxHeight="65"
-                onAction="#balanceClick"
-                GridPane.columnIndex="2"
-                GridPane.rowIndex="2"
-                GridPane.halignment="CENTER">
-
-            <font>
-                <Font size="18"/>
-            </font>
-
-        </Button>
-
         <!-- ================= View Accounts ================= -->
 
         <Button fx:id="view"
@@ -168,8 +110,8 @@
                 maxWidth="240"
                 maxHeight="65"
                 onAction="#OnView"
-                GridPane.columnIndex="1"
-                GridPane.rowIndex="3"
+                GridPane.columnIndex="2"
+                GridPane.rowIndex="1"
                 GridPane.halignment="CENTER">
 
             <font>
@@ -187,8 +129,27 @@
                 maxWidth="240"
                 maxHeight="65"
                 onAction="#exitClick"
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="2"
+                GridPane.halignment="CENTER">
+
+            <font>
+                <Font size="18"/>
+            </font>
+
+        </Button>
+
+        <!-- ================= Back ================= -->
+
+        <Button fx:id="backClick"
+                text="Back"
+                prefWidth="240"
+                prefHeight="65"
+                maxWidth="240"
+                maxHeight="65"
+                onAction="#backClick"
                 GridPane.columnIndex="2"
-                GridPane.rowIndex="3"
+                GridPane.rowIndex="2"
                 GridPane.halignment="CENTER">
 
             <font>
