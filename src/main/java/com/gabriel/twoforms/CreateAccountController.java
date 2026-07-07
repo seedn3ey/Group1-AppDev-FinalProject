@@ -40,13 +40,19 @@ public class CreateAccountController {
         String accNumStr = acc_num.getText();
 
         // 1. Create it in active memory
-        Bank.createAccount(Integer.parseInt(accNumStr), name);
+        boolean success = Bank.createAccount(Integer.parseInt(accNumStr), name);
+
+        if (!success) {
+            // Account already existed — Alert was already shown by Bank.createAccount.
+            // Stay on this screen, don't save or navigate.
+            return;
+        }
 
         // 2. Save it permanently (Starts with 0.0 balance)
         saveAccountToFile(name, accNumStr, 0.0);
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("transaction-view.fxml"));
-        Parent root = (Parent)fxmlLoader.load();
+        Parent root = (Parent) fxmlLoader.load();
         Scene scene = new Scene(root);
         Node node = (Node) actionEvent.getSource();
         Stage stage = (Stage) node.getScene().getWindow();

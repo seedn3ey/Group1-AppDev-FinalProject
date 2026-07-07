@@ -21,6 +21,17 @@ public class CustomerLoginController {
     public static Account currentLoggedInAccount = null;
 
     @FXML
+    public void backClick(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("mainpage-view.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Node node = (Node) actionEvent.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.setTitle("Welcome Page");
+        stage.setScene(scene);
+    }
+
+    @FXML
     public void OnLoginSubmit(ActionEvent actionEvent) throws IOException {
         String inputStr = tf_login_acc.getText();
 
@@ -36,7 +47,9 @@ public class CustomerLoginController {
                 }
             }
 
-            if (accountFound) {
+            if (!accountFound) {
+                lbl_error.setText("❌ Account number not found!");
+            } else {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customer-view.fxml"));
                 Parent root = fxmlLoader.load();
                 Scene scene = new Scene(root);
@@ -44,8 +57,6 @@ public class CustomerLoginController {
                 Stage stage = (Stage) node.getScene().getWindow();
                 stage.setScene(scene);
                 stage.show();
-            } else {
-                lbl_error.setText("❌ Account number not found!");
             }
         } catch (NumberFormatException e) {
             lbl_error.setText("❌ Please enter a valid number!");

@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300" prefWidth="400" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.CustomerLoginController">
+<AnchorPane prefHeight="300" prefWidth="400" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.CustomerLoginController">
     <children>
-        <Label layoutX="107" layoutY="54" text="Customer Login">
-            <font><Font size="20" /></font>
+        <Label layoutX="89.0" layoutY="45.0" text="Customer Login">
+            <font><Font size="30.0" /></font>
         </Label>
-        <TextField fx:id="tf_login_acc" layoutX="107.0" layoutY="116.0" promptText="Enter Account Number" />
-        <Button layoutX="168.0" layoutY="168.0" mnemonicParsing="false" onAction="#OnLoginSubmit" text="Login" />
-        <Label fx:id="lbl_error" layoutX="107.0" layoutY="215.0" text="" textFill="RED" />
+        <TextField fx:id="tf_login_acc" layoutX="102.0" layoutY="123.0" promptText="Enter Account Number" />
+        <Button layoutX="237.0" layoutY="222.0" mnemonicParsing="false" onAction="#OnLoginSubmit" text="Login" />
+        <Label fx:id="lbl_error" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="164.0" prefHeight="30.0" prefWidth="330.0" text="Please enter your account number." textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button layoutX="89.0" layoutY="222.0" mnemonicParsing="false" onAction="#OnLoginSubmit" text="Back" />
     </children>
 </AnchorPane>

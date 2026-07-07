@@ -19,7 +19,7 @@ public class Bank {
         alert.getDialogPane().getStyleClass().add("alert-dialog");
     }
 
-    static void createAccount(int accountNumber, String owner) {
+    static boolean createAccount(int accountNumber, String owner) {
 
         Alert AccExist = new Alert(AlertType.INFORMATION);
         AccExist.setHeaderText("Account already exists!");
@@ -31,20 +31,19 @@ public class Bank {
         NewAcc.setTitle("Congrats!");
         styleAlert(NewAcc);
 
-        for(Account acc:accounts) {
-            if (acc.getAccountNumber() ==accountNumber) {
+        for (Account acc : accounts) {
+            if (acc.getAccountNumber() == accountNumber) {
                 System.out.println("Account already exists!");
-
                 AccExist.showAndWait();
-                return;
+                return false;
             }
         }
 
-        Account account=new Account(accountNumber,owner);
+        Account account = new Account(accountNumber, owner);
         accounts.add(account);
         System.out.println("Account created successfully.");
         NewAcc.showAndWait();
-
+        return true;
     }
 
     // Silent version — no popups. Used only when restoring accounts from disk on startup.
@@ -97,10 +96,19 @@ public class Bank {
         NoAcc.showAndWait();
     }
 
-    static void Check(double amount,int accountNumber) {
-        Alert Balance = new Alert(AlertType.INFORMATION);
-        Balance.setHeaderText("Account not found!");
-        styleAlert(Balance);
+    static void Check(int accountNumber) {
+        for (Account acc : accounts) {
+            if (acc.getAccountNumber() == accountNumber) {
+                acc.CheckBal();
+                return;
+            }
+        }
+        Alert NoAcc = new Alert(AlertType.INFORMATION);
+        NoAcc.setHeaderText("Account not found!");
+        NoAcc.setTitle("Oh No!");
+        styleAlert(NoAcc);
+        System.out.println("Account not found!");
+        NoAcc.showAndWait();
     }
 
     public static void loadAccountsFromFile() {

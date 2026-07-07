@@ -41,6 +41,7 @@ public class TransactionController {
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
     public void withdrawClick(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("withdraw.fxml"));

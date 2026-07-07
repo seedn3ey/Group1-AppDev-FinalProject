@@ -71,8 +71,10 @@ public class Account {
         }
     }
 
-    public void CheckBal(double CheckB) {
+    public void CheckBal() {
         Alert AlertCheckBalance = new Alert(Alert.AlertType.INFORMATION);
-        AlertCheckBalance.setHeaderText("Here is your Balance in your account.");
+        AlertCheckBalance.setHeaderText("Your current balance is: " + balance);
+        AlertCheckBalance.setTitle("Balance");
+        AlertCheckBalance.showAndWait();
     }
 }
